@@ -275,3 +275,62 @@
 
 })(jQuery);
 
+
+ $(document).ready(function(){
+	 $('.owl-carousel').owlCarousel({
+		 items: 1,
+		 loop: true,
+		 margin: 30,
+		 nav: true,
+		 autoplay: true,
+		 autoplayTimeout: 3000,
+		 autoplayHoverPause: true,
+		 animateOut: 'fadeOut',
+		 animateIn: 'fadeIn',
+		 dots: true, // Activer les indicateurs de pagination
+		 dotsEach: true, // Afficher un indicateur de pagination pour chaque diapositive
+		 responsive:{
+			 0:{
+				 items:1,
+				 stagePadding: 30
+			 },
+			 600:{
+				 items:2,
+				 stagePadding: 30
+			 },
+			 1000:{
+				 items:3,
+				 stagePadding: 0
+			 }
+		 }
+	 });
+ });
+
+ document.addEventListener('DOMContentLoaded', function() {
+	 var cards = document.querySelectorAll('.blog-card');
+	 var card2 = document.querySelector('.blog-card2');
+	 var delay = 10; // délai en millisecondes pour l'effet d'animation
+	 var totalDuration = 500; // durée totale de l'animation en millisecondes
+
+	 cards.forEach(function(card, index) {
+		 card.style.transition = 'opacity ' + (totalDuration / 1000) + 's, transform ' + (totalDuration / 1000) + 's';
+		 card.style.opacity = '0';
+		 card.style.transform = 'translateX(-100%)';
+
+		 setTimeout(function() {
+			 card.style.opacity = '1';
+			 card.style.transform = 'translateX(0)';
+		 }, delay * index);
+	 });
+
+	 card2.style.transition = 'opacity ' + (totalDuration / 1000) + 's, transform ' + (totalDuration / 1000) + 's';
+	 card2.style.opacity = '0';
+	 card2.style.transform = 'translateX(100%)';
+
+	 setTimeout(function() {
+		 card2.style.opacity = '1';
+		 card2.style.transform = 'translateX(0)';
+	 }, delay * cards.length);
+ });
+
+
