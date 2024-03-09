@@ -9688,6 +9688,14 @@ textarea.form-control {
   transition: box-shadow 0.3s;
   box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.1);
   border-radius: 20px;
+  width: 100%;
+    margin: 0 auto;
+  margin-bottom: 5px;
+}
+
+.card-title{
+  color: #0b0b0b;
+
 }
 
 .card:hover {
@@ -9710,6 +9718,19 @@ textarea.form-control {
   transition: transform 0.5s;
 }
 
+.ligne{
+  display: flex;
+  flex-direction: row;
+}
+
+.colonne{
+  display: flex;
+  flex-direction: column;
+}
+
+.card-intern{
+  margin: 5px;
+}
 
 .card-text {
   font-size: 20px;
@@ -9722,6 +9743,19 @@ textarea.form-control {
 .button-info:hover {
     box-shadow: 0px 0px 15px 5px rgba(0, 0, 0, 0.7);
 }
+
+.precedent {
+    transition: transform 0.5s;
+}
+
+.precedent:hover {
+  transform: scale(1.1);
+  box-shadow: 0px 0px 15px 5px rgba(255, 255, 255, 0.7);
+}
+
+
+
+
 
 
 
